@@ -120,7 +120,7 @@ a, a:visited {
 }
 
 ::placeholder {
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.5);
 }
 
 #user {
