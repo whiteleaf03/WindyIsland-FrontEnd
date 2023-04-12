@@ -134,7 +134,8 @@ a, a:visited {
 }
 
 #content {
-
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
