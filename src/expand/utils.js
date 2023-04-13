@@ -62,3 +62,14 @@ export function formatJSON(jsonString) {
 function indent(level) {
     return "  ".repeat(level);
 }
+
+
+/**
+ * 代码上色
+ */
+export function prismCode() {
+    const script = document.createElement('script');
+    script.src = "/prism/prism.js";
+    document.body.appendChild(script);
+    document.body.removeChild(script)
+}
