@@ -4,13 +4,14 @@
             <div id="logo">WhiteLeaf03</div>
             <div style="flex: 5; display: flex; width: 150%">
                 <div id="menu">
-                    <router-link class="menu-item" to="/index"><img class="menu-icon" alt="" src="/icon/首页-置灰.png">首页</router-link>
-                    <router-link class="menu-item" to="/article"><img class="menu-icon" alt="" src="/icon/order.png">博文</router-link>
-                    <router-link class="menu-item" to="/comment"><img class="menu-icon" alt="" src="/icon/message.png">留言</router-link>
-                    <router-link class="menu-item" to="/about"><img class="menu-icon" alt="" src="/icon/user.png">关于我</router-link>
+                    <router-link class="menu-item" to="/index"><img class="menu-icon" alt="" src="/icon/首页-置灰.svg">首页</router-link>
+                    <router-link class="menu-item" to="/article"><img class="menu-icon" alt="" src="/icon/分享.svg">博文</router-link>
+                    <router-link class="menu-item" to="/comment"><img class="menu-icon" alt="" src="/icon/签署协议.svg">随笔</router-link>
+                    <router-link class="menu-item" to="/message"><img class="menu-icon" alt="" src="/icon/未读消息_message-unread.svg">留言</router-link>
+                    <router-link class="menu-item" to="/about"><img class="menu-icon" alt="" src="/icon/我的_me.svg">关于我</router-link>
                 </div>
                 <div id="search">
-                    <div id="input"><img src="/icon/search.png" alt=""><input placeholder="请输入内容"></div>
+                    <div id="input"><img src="/icon/search.svg" alt=""><input placeholder="请输入内容"></div>
                 </div>
             </div>
             <div id="user">
