@@ -1,5 +1,7 @@
 import * as VueRouter from 'vue-router'
 import Index from "../components/Index.vue";
+import Article from "../components/Article.vue";
+import ArticlePage from "../components/pages/ArticlePage.vue";
 
 const routes = [
     {
@@ -9,6 +11,14 @@ const routes = [
     {
         path: '/index',
         component: Index
+    },
+    {
+        path: '/article',
+        component: Article
+    },
+    {
+        path: '/article/:path',
+        component: ArticlePage
     }
 ]
 
