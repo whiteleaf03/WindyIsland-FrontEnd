@@ -2,6 +2,8 @@ import * as VueRouter from 'vue-router'
 import Index from "../components/Index.vue";
 import Article from "../components/Article.vue";
 import ArticlePage from "../components/pages/ArticlePage.vue";
+import Essay from "../components/Essay.vue";
+import EssayPage from "../components/pages/EssayPage.vue";
 
 const routes = [
     {
@@ -19,6 +21,14 @@ const routes = [
     {
         path: '/article/:path',
         component: ArticlePage
+    },
+    {
+        path: '/essay',
+        component: Essay
+    },
+    {
+        path: '/essay/:path',
+        component: EssayPage
     }
 ]
 
