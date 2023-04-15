@@ -24,11 +24,11 @@
         <div id="article-sidebar">
             <div id="article-sidebar-classification">
                 <div id="article-sidebar-classification-title">分类</div>
-                <div class="article-sidebar-classification-item" v-for="classification in classifications">
+                <div class="article-sidebar-classification-item" v-for="item in classifications">
                     <div style="border-top: 1px solid rgba(128,128,128,.8); width: 100%; margin: 14px 0"></div>
-                    <div style="display: flex; justify-content: space-between">
-                        <div>{{ classification }}</div>
-                        <div>0</div>
+                    <div style="display: flex; justify-content: space-between; font-family: 站酷仓耳渔阳体-03, fangsong">
+                        <div>{{ item.classification }}</div>
+                        <div>{{ item.total }}</div>
                     </div>
                 </div>
             </div>
