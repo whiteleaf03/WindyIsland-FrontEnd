@@ -4,6 +4,7 @@ import Article from "../components/Article.vue";
 import ArticlePage from "../components/pages/ArticlePage.vue";
 import Essay from "../components/Essay.vue";
 import EssayPage from "../components/pages/EssayPage.vue";
+import Message from "../components/Message.vue";
 
 const routes = [
     {
@@ -29,6 +30,10 @@ const routes = [
     {
         path: '/essay/:path',
         component: EssayPage
+    },
+    {
+        path: '/message',
+        component: Message
     }
 ]
 
