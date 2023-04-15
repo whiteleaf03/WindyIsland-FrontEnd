@@ -55,7 +55,7 @@ export default {
         async readArticleList() {
             let articleList
             await axios({
-                url: "/pages/directory.json",
+                url: "/pages/articles/directory.json",
                 method: "GET",
             }).then((res) => {
                 articleList = res.data
@@ -68,7 +68,7 @@ export default {
         },
         async readClassifications() {
             await axios({
-                url: "/pages/classifications.json",
+                url: "/pages/articles/classifications.json",
                 method: "GET"
             }).then((res) => {
                 this.classifications = res.data

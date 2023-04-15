@@ -32,7 +32,7 @@ export default {
         async readPage() {
             let page
             await axios({
-                url: "/pages/" + this.path + ".json",
+                url: "/pages/articles/" + this.path + ".json",
                 method: "GET"
             }).then((res) => {
                 page = res.data
