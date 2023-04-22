@@ -13,6 +13,10 @@
         <div id="article-page-content">
             <div v-html="page.content"></div>
         </div>
+        <div id="article-page-footer">
+            <div style="display: flex; align-items: center; color: #1E90FF"><img src="/icon/文件夹-开_folder-open.svg" alt="" class="article-list-item-icon">{{ page.classification }}</div>
+            <div style="display: flex; align-items: center"><div v-for="item in page.tags" style="margin-left: 16px; background-color: #1E90FF; border-radius: 5px; padding: 6px; color: white">{{ item }}</div></div>
+        </div>
     </div>
 </template>
 
@@ -104,5 +108,15 @@ export default {
     #article-page-content {
         margin-top: 28px;
         width: calc(100% - 28px);
+    }
+
+    #article-page-footer {
+        width: calc(100% - 28px - 22px);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        background-color: rgba(255, 219, 103, 0.5);
+        padding: 6px 12px;
+        border-radius: 5px
     }
 </style>

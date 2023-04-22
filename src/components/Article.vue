@@ -27,7 +27,7 @@
                 <div class="article-sidebar-classification-item" v-for="item in classifications">
                     <div style="border-top: 1px solid rgba(128,128,128,.8); width: 100%; margin: 14px 0"></div>
                     <div style="display: flex; justify-content: space-between; font-family: 站酷仓耳渔阳体-03, fangsong">
-                        <div>{{ item.classification }}</div>
+                        <div>{{ item.name }}</div>
                         <div>{{ item.total }}</div>
                     </div>
                 </div>
@@ -63,6 +63,7 @@ export default {
             for (let index in articleList) {
                 articleList[index].path = "/article/" + articleList[index].title + "_" + articleList[index].updateTime
                 articleList[index].updateTime = tsToDate(articleList[index].updateTime).split(' ')[0]
+                articleList[index].borderColor = 'border: 1px solid ' + articleList[index].borderColor
             }
             this.articleList = articleList
         },
