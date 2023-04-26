@@ -27,8 +27,9 @@
                 <div class="article-sidebar-classification-item" v-for="item in classifications">
                     <div style="border-top: 1px solid rgba(128,128,128,.8); width: 100%; margin: 14px 0"></div>
                     <div style="display: flex; justify-content: space-between; font-family: 站酷仓耳渔阳体-03, fangsong">
-                        <div>{{ item.name }}</div>
-                        <div>{{ item.total }}</div>
+                        <img :src="item.cover" alt="" style="width: 48px; border-radius: 25px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 16px; justify-self: flex-start">{{ item.name }}</div>
+                        <div style="display: flex; flex-direction: column; justify-content: center; margin-left: auto">{{ item.total }}</div>
                     </div>
                 </div>
             </div>
