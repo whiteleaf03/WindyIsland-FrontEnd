@@ -16,8 +16,6 @@
             </div>
             <div id="user">
                 <div style="flex: 3"></div>
-                <div style="flex: 1;">登录</div>
-                <div style="flex: 1;">注册</div>
                 <div style="flex: 3"></div>
             </div>
         </header>
