@@ -13,8 +13,8 @@
                         <div style="display: flex">
                             <div class="article-list-item-author"><img src="/icon/编辑姓名_edit-name.svg" alt="" class="article-list-item-icon">{{ item.author }}</div>
                             <div class="article-list-item-updateTime"><img src="/icon/日程表_schedule.svg" alt="" class="article-list-item-icon">{{ item.updateTime }}</div>
-                            <div class="article-list-item-view"><img src="/icon/预览-打开_preview-open.svg" alt="" class="article-list-item-icon">{{ item.view }}</div>
-                            <div class="article-list-item-comment"><img src="/icon/消息-置灰.svg" alt="" class="article-list-item-icon">{{ item.comment }}</div>
+<!--                            <div class="article-list-item-view"><img src="/icon/预览-打开_preview-open.svg" alt="" class="article-list-item-icon">{{ item.view }}</div>-->
+<!--                            <div class="article-list-item-comment"><img src="/icon/消息-置灰.svg" alt="" class="article-list-item-icon">{{ item.comment }}</div>-->
                         </div>
                         <div class="article-list-item-classification"><img src="/icon/文件夹-开_folder-open.svg" alt="" class="article-list-item-icon">{{ item.classification }}</div>
                     </div>
