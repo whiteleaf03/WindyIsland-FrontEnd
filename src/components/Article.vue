@@ -62,7 +62,7 @@ export default {
                 articleList = res.data
             })
             for (let index in articleList) {
-                articleList[index].path = "/article/" + articleList[index].title + "_" + articleList[index].updateTime
+                articleList[index].path = "/article/" + articleList[index].filename + "_" + articleList[index].updateTime
                 articleList[index].updateTime = tsToDate(articleList[index].updateTime).split(' ')[0]
                 articleList[index].borderColor = 'border: 1px solid ' + articleList[index].borderColor
             }

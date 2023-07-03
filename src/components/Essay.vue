@@ -8,7 +8,7 @@
                 </div>
                 <div style="width: 100%; display: flex; margin: -1px 0">
                     <div class="timeline-line"></div>
-                    <router-link :to="item.path" class="timeline-content">
+                    <router-link :to="item.filename" class="timeline-content">
                             <img :src="item.cover" style="flex: 1; width: 20vw" alt="">
                             <div style="flex: 3">
                                 <div class="timeline-content-title">{{ item.title }}</div>
@@ -46,7 +46,7 @@ export default {
                 essayList = res.data
             })
             for (let index in essayList) {
-                essayList[index].path = "/essay/" + essayList[index].title + "_" + essayList[index].updateTime
+                essayList[index].path = "/essay/" + essayList[index].filename + "_" + essayList[index].updateTime
                 essayList[index].updateTime = tsToDate(essayList[index].updateTime).split(' ')[0]
             }
             this.essayList = essayList
