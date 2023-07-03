@@ -1,5 +1,5 @@
 <template>
-    <div id="about">
+    <div id="about" class="animate__animated animate__fadeIn">
         <div id="about-header">
             <div style="font-size: xxx-large">关于我</div>
             <div style="font-size: large">Upload Date: 2023.4.26</div>
