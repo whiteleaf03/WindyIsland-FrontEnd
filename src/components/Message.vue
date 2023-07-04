@@ -53,7 +53,7 @@ export default {
         async getMessageList() {
             let messageList = []
             await axios({
-                url: "/api/message",
+                url: "/blog/api/message",
                 method: "GET",
             }).then((res) => {
                 messageList = res.data
@@ -71,7 +71,7 @@ export default {
             if (this.nickname !== '' && this.email !== '' && this.content !== '') {
                 let result
                 await axios({
-                    url: "/api/message",
+                    url: "/blog/api/message",
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'
