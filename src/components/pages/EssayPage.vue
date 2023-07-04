@@ -1,16 +1,12 @@
 <template>
     <div id="essay-page" class="animate__animated animate__fadeInUp">
         <div id="essay-page-title">{{ page.title }}</div>
-        <div style="display: flex; margin-top: 28px">
-            <div id="essay-page-cover" style="flex: 1"><img :src="page.cover" alt=""></div>
-            <div style="flex: 1; display: flex; flex-direction: column; padding: 28px 14px; justify-content: center; align-items: center; text-align: center">
-                <div style="display: flex; align-items: center; justify-content: center; flex: 1">
-                    <div id="essay-page-author"><div style="font-size: xx-large; color: black; font-weight: bolder">AUTHOR</div><div>{{ page.author }}</div></div>
-                    <div id="essay-page-updateTime"><div style="font-size: xx-large; color: black; font-weight: bolder">DATE</div>{{ page.updateTime }}</div>
-                </div>
-                <div id="essay-page-describe" v-html="page.describe"></div>
-            </div>
+        <div id="essay-page-info">
+            <div style="flex: 1"></div>
+            <div style="flex: 2; text-align: center; font-size: x-large;  font-family: 站酷仓耳渔阳体-03,serif">{{ page.describe }}</div>
+            <div style="flex: 1; text-align: right; font-family: 站酷仓耳渔阳体-03,serif">生产日期:{{ page.updateTime }}</div>
         </div>
+        <div id="essay-page-cover" style="flex: 1"><img :src="page.cover" alt=""></div>
         <div id="essay-page-content">
             <div v-html="page.content"></div>
         </div>
@@ -39,7 +35,6 @@ export default {
                 page = res.data
             })
             page.updateTime = tsToDate(page.updateTime).split(' ')[0]
-            page.describe = '<div style="font-size: xx-large; color: black; font-weight: bolder">DESCRIBE</div>' + page.describe
             page.author = 'WhiteLeaf03'
             this.page = page
         }
@@ -68,7 +63,13 @@ export default {
     font-family: 站酷仓耳渔阳体-05, fangsong;
     font-size: xxx-large;
     color: #1E90FF;
+}
 
+#essay-page-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 #essay-page-cover {
@@ -81,27 +82,6 @@ export default {
 #essay-page-cover img {
     width: 100%;
     border-radius: 5px;
-}
-
-#essay-page-author {
-    font-family: 站酷仓耳渔阳体-02, fangsong;
-    font-size: large;
-    color: #ffa500;
-    margin: 0 48px 24px;
-}
-
-#essay-page-updateTime {
-    font-family: 站酷仓耳渔阳体-02, fangsong;
-    font-size: large;
-    color: #ffa500;
-    margin: 0 48px 24px;
-}
-
-#essay-page-describe {
-    flex: 3;
-    font-family: 站酷仓耳渔阳体-02, fangsong;
-    font-size: large;
-    color: #ffa500;
 }
 
 #essay-page-content {
