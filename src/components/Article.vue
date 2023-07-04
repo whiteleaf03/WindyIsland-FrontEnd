@@ -76,7 +76,6 @@ export default {
             }).then((res) => {
                 this.classifications = res.data
             })
-            console.log(this.classifications)
         }
     },
     mounted() {

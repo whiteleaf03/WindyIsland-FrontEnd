@@ -49,8 +49,7 @@ export default {
                 essayList[index].path = "/essay/" + essayList[index].filename + "_" + essayList[index].updateTime
                 essayList[index].updateTime = tsToDate(essayList[index].updateTime).split(' ')[0]
             }
-            this.essayList = essayList
-            console.log(essayList)
+            this.essayList = essayList.reverse()
         }
     },
     mounted() {

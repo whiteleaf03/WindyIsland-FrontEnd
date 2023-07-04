@@ -42,7 +42,7 @@ export default {
     mounted() {
         this.path = this.$route.params.path
         this.readEssay()
-        console.log(this.page)
+        h2.log(this.page)
     }
 }
 </script>

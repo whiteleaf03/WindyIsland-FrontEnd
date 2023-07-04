@@ -49,7 +49,6 @@ export default {
     mounted() {
         this.path = this.$route.params.path
         this.readPage()
-        console.log(this.page.cover)
     }
 }
 </script>
