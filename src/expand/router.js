@@ -6,6 +6,7 @@ import Essay from "../components/Essay.vue";
 import EssayPage from "../components/pages/EssayPage.vue";
 import Message from "../components/Message.vue";
 import About from "../components/About.vue";
+import SearchPage from "../components/pages/SearchPage.vue";
 
 const routes = [
     {
@@ -39,6 +40,10 @@ const routes = [
     {
         path: '/about',
         component: About
+    },
+    {
+        path: '/search/:key',
+        component: SearchPage
     }
 ]
 

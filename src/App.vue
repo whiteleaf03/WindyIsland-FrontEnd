@@ -11,7 +11,7 @@
                     <router-link class="menu-item" to="/about"><img class="menu-icon" alt="" src="/icon/我的_me.svg">关于我</router-link>
                 </div>
                 <div id="search">
-                    <div id="input"><img src="/icon/search.svg" alt=""><input placeholder="请输入内容"></div>
+                    <div id="input"><img src="/icon/search.svg" alt=""><input placeholder="请输入内容" v-model="key"></div><button @click="search">搜&nbsp;索</button>
                 </div>
             </div>
             <div id="user">
@@ -31,7 +31,20 @@
 </template>
 
 <script setup>
+import {ref} from "vue";
+import {useRouter} from "vue-router";
 
+const router = useRouter()
+const key = ref()
+
+function search() {
+    if (key.value !== undefined && key.value !== '') {
+        router.push('/search/' + key.value)
+        // key.value = 123
+    } else {
+        alert("请输入内容")
+    }
+}
 </script>
 
 <style scoped>
@@ -96,6 +109,7 @@ a, a:visited {
     display: flex;
     justify-content: center;
     border: 1px solid whitesmoke;
+    border-right: none;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -116,6 +130,14 @@ a, a:visited {
 
 #search #input input:focus {
     outline: none;
+}
+
+#search button {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 0 6px;
+    position: relative;
 }
 
 ::placeholder {

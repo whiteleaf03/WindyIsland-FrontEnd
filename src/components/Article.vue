@@ -67,6 +67,7 @@ export default {
                 articleList[index].borderColor = 'border: 1px solid ' + articleList[index].borderColor
             }
             this.articleList = articleList
+            return articleList
         },
         async readClassifications() {
             await axios({
